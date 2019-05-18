@@ -15,4 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('get-information', '\App\Http\Controllers\HomeController@index');
+Route::get('get-all-information', '\App\Http\Controllers\HomeController@getAll');
+
+Route::get('get-information', '\App\Http\Controllers\HomeController@getInformation');
