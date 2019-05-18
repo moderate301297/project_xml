@@ -12,9 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('get-all-information', '\App\Http\Controllers\HomeController@getAll');
 
 Route::get('get-information', '\App\Http\Controllers\HomeController@getInformation');
+
+Route::get('home',function(){
+	return view('index');
+})
