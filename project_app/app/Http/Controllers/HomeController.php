@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Auth;
 use App\User;
+use App\Travel;
 
 class HomeController extends Controller
 {
@@ -43,6 +44,19 @@ class HomeController extends Controller
         $users = User::where('type_tour', '=', $type_tour)->get();
         
         return $users;
+    }
+
+     public function duLichTrongNuoc(){
+        return view('trongnuoc');
+    }
+
+    public function duLichNuocNgoai(){
+        return view('ngoainuoc');
+    }
+
+    public function getHome(){
+        $data['travels'] = Travel::all()->take(4);
+        return view('index',$data);
     }
 
     
