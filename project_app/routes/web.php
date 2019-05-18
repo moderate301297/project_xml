@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('get-information', '\App\Http\Controllers\HomeController@index');
+
+Route::get('home',function(){
+	return view('index');
+})
