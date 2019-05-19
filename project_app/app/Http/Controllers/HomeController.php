@@ -31,7 +31,7 @@ class HomeController extends Controller
             $name_tour = $request->name_tour;
         }
         if ($request->has('type_tour')) {
-            $type_tour = $request->type_tour;
+            $type_tour = $request->type_tour;3
         }
         if ($request->has('cost_tour')) {
             $cost_tour = $request->cost_tour;

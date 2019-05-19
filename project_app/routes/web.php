@@ -21,4 +21,4 @@ Route::get('get-information', '\App\Http\Controllers\HomeController@getInformati
 
 Route::get('home',function(){
 	return view('index');
-})
+});
