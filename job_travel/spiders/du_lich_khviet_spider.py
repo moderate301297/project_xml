@@ -63,11 +63,12 @@ class KHVietSpider(scrapy.Spider):
             cost_tour_new = cost_tour
 
         yield{
-            'name_tour': name_tour.encode('utf-8'),
+            'source': 'khviet',
+            'title': name_tour.encode('utf-8'),
             'type_tour': type_tour.encode('utf-8'),
             'url_tour': url_new.encode('utf-8'),
             'number_date': number_date_new,
-            'start_date': start_date_new,
+            'begin_date': start_date_new,
             'cost_tour': cost_tour_new
         }
 

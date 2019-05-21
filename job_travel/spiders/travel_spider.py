@@ -71,7 +71,8 @@ class TravelSpider(scrapy.Spider):
 
             # number_date_new = self.checkNumberDate(number_date[i])
             yield{
-                'name_tour': name_tour[i].encode('utf-8'),
+                'source': 'travel',
+                'title': name_tour[i].encode('utf-8'),
                 'type_tour': type_tour[0].encode('utf-8'),
                 'url_tour': url_new.encode('utf-8'),
                 'number_date': number_date[i].encode('utf-8'),

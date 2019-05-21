@@ -66,12 +66,14 @@ ROBOTSTXT_OBEY = True
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'job_travel.pipelines.DuplicatesPipeline': 100,
+    'job_travel.pipelines.MappingPipeline': 200,
     'job_travel.pipelines.NormalizeNumberDatePipeline': 300,
     'job_travel.pipelines.NormalizeTypePipeline': 400,
     'job_travel.pipelines.NormalizeCostTourPipeline': 500,
-    'job_travel.pipelines.NormalizeStartDatePipeline':600,
-    # 'job_travel.pipelines.JsonWriterPipeline': 700,
-    'job_travel.pipelines.MongoPipeline': 800,
+    'job_travel.pipelines.NormalizeStartDatePipeline': 600,
+    'job_travel.pipelines.DuplicatesListPipeline': 700,
+    # 'job_travel.pipelines.JsonWriterPipeline': 800,
+    'job_travel.pipelines.MongoPipeline': 900,
 }
 
 MONGO_URI = 'localhost:27017'

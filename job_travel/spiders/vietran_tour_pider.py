@@ -64,9 +64,10 @@ class VietTSpider(scrapy.Spider):
             cost_tour_new = cost_tour
 
         yield{
+            'source': 'vietT',
             'name_tour': name_tour.encode('utf-8'),
             'type_tour': type_tour.encode('utf-8'),
-            'url_tour': url_new.encode('utf-8'),
+            'link': url_new.encode('utf-8'),
             'number_date': number_date_new,
             'start_date': start_date_new,
             'cost_tour': cost_tour_new

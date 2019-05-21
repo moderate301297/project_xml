@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('welcome');
 });
 
 Route::get('get-all-information', '\App\Http\Controllers\HomeController@getAll');
@@ -22,3 +22,8 @@ Route::get('get-information', '\App\Http\Controllers\HomeController@getInformati
 Route::get('home',function(){
 	return view('index');
 });
+Route::get('travel','HomeController@getHome');
+Route::get('travel/trongnuoc','HomeController@duLichTrongNuoc');
+Route::get('travel/ngoainuoc','HomeController@duLichNuocNgoai');
+
+

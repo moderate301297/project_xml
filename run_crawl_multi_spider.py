@@ -11,9 +11,9 @@ from job_travel.spiders.vietran_tour_pider import VietTSpider
 
 configure_logging()
 runner = CrawlerRunner(get_project_settings())
+runner.crawl(VietTSpider)
+runner.crawl(TravelSpider)
 runner.crawl(KHVietSpider)
-# runner.crawl(TravelSpider)
-# runner.crawl(VietTSpider)
 
 d = runner.join()
 d.addBoth(lambda _: reactor.stop())
